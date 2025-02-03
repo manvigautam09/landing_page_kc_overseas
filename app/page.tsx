@@ -3,6 +3,8 @@ import Image from "next/image";
 import Header from "./components/Header";
 import landingSvg from "./assets/landing-bg.svg";
 import arrowDown from "./assets/arrow-down.svg";
+import Services from "./components/Services";
+import Ambitions from "./components/Ambitions";
 
 export default function Home() {
   return (
@@ -35,13 +37,13 @@ export default function Home() {
             style={{
               backgroundImage: "linear-gradient(to right, #FF6A56, #FDAF4D)",
             }}
-            className="px-6 rounded-md text-white font-bold hover:opacity-80"
+            className="px-6 rounded-md text-white font-bold hover:shadow-lg hover:shadow-gray-400"
           >
             Enquire Now
           </button>
 
           <button className="flex items-center space-x-2 text-base hover:shadow-lg hover:shadow-gray-300 rounded-md p-2">
-            <div className="bg-white rounded-full p-2 w-10 h-10 flex justify-center items-center">
+            <div className="bg-white rounded-full p-2 w-8 h-8 flex justify-center items-center">
               <Image alt="arrowDown" src={arrowDown} />
             </div>
             <div>Branch Address</div>
@@ -50,121 +52,10 @@ export default function Home() {
       </div>
 
       {/* Services Section */}
-      {/* <div className="py-20 px-4">
-        <h2 className="text-4xl font-bold text-center mb-16">
-          Services we provide
-        </h2>
-
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-xl p-8 shadow-lg flex items-start gap-4">
-            <Image src="/window.svg" alt="Test Prep" width={40} height={40} />
-            <div>
-              <h3 className="font-semibold text-xl mb-2">
-                Test Preparing & Coaching
-              </h3>
-              <p className="text-gray-600">
-                Expert guidance and comprehensive preparation for international
-                education tests
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl p-8 shadow-lg flex items-start gap-4">
-            <Image
-              src="/globe.svg"
-              alt="Course Selection"
-              width={40}
-              height={40}
-            />
-            <div>
-              <h3 className="font-semibold text-xl mb-2">
-                Course, Country & University Selection
-              </h3>
-              <p className="text-gray-600">
-                Personalized assistance in choosing the right path for your
-                academic journey
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl p-8 shadow-lg flex items-start gap-4">
-            <Image src="/file.svg" alt="Application" width={40} height={40} />
-            <div>
-              <h3 className="font-semibold text-xl mb-2">
-                Application Assistance
-              </h3>
-              <p className="text-gray-600">
-                Complete support throughout your university application process
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl p-8 shadow-lg flex items-start gap-4">
-            <Image
-              src="/window.svg"
-              alt="Scholarships"
-              width={40}
-              height={40}
-            />
-            <div>
-              <h3 className="font-semibold text-xl mb-2">Scholarships</h3>
-              <p className="text-gray-600">
-                Access to exclusive scholarship opportunities and application
-                support
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-[#F4804E] text-white px-8 py-3 rounded-lg">
-            Enquire Now
-          </button>
-        </div>
-      </div> */}
+      <Services />
 
       {/* Global Ambitions Section */}
-      {/* <div className="bg-gray-50 py-20 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="rounded-3xl overflow-hidden bg-[#FFF1E7] p-6">
-            <Image
-              src="/student-counselling.jpg"
-              alt="Student Counselling"
-              width={600}
-              height={400}
-              className="rounded-2xl w-full h-auto"
-            />
-          </div>
-
-          <div className="space-y-6">
-            <h2 className="text-4xl font-bold">
-              Realize your global ambitions with us
-            </h2>
-            <p className="text-gray-600">
-              With a keen ear for your choices and preferences, our counselling
-              experience is so seamless that you will land in your dream
-              university even before you do!
-            </p>
-
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <span className="text-[#F4804E] text-2xl">•</span>
-                <p>Virtual & In Person Coaching and Counselling</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-[#F4804E] text-2xl">•</span>
-                <p>
-                  Comprehensive Assistance for Applications, Admissions & Visas
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-[#F4804E] text-2xl">•</span>
-                <p>High Value Scholarships and Study Loans</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      <Ambitions />
     </div>
   );
 }
