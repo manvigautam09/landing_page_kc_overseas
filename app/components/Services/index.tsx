@@ -5,6 +5,25 @@ import star from "../../assets/star.svg";
 import badge from "../../assets/badge.svg";
 import location from "../../assets/location.svg";
 
+const ProvidedServices = [
+  {
+    icon: hand,
+    title: "Test Preparing & Coaching",
+  },
+  {
+    icon: location,
+    title: "Course, Country & University Selection",
+  },
+  {
+    icon: badge,
+    title: "Application Assistance",
+  },
+  {
+    icon: star,
+    title: "Scholarships",
+  },
+];
+
 const Services = () => {
   return (
     <div className="py-20 px-4">
@@ -12,40 +31,16 @@ const Services = () => {
         Services we provide
       </h2>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-white rounded-xl p-8 shadow-lg flex items-start gap-4">
-          <Image src={hand} alt="hand" width={40} height={40} />
-          <div>
-            <h3 className="font-semibold text-xl mb-2">
-              Test Preparing & Coaching
-            </h3>
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        {ProvidedServices.map((service) => (
+          <div
+            className="bg-white rounded-xl p-8 shadow-2xl flex items-center gap-4 justify-start"
+            key={service.title}
+          >
+            <Image src={service.icon} alt="hand" width={30} height={30} />
+            <div className="font-semibold text-lg">{service.title}</div>
           </div>
-        </div>
-
-        <div className="bg-white rounded-xl p-8 shadow-lg flex items-start gap-4">
-          <Image src={location} alt="location" width={40} height={40} />
-          <div>
-            <h3 className="font-semibold text-xl mb-2">
-              Course, Country & University Selection
-            </h3>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl p-8 shadow-lg flex items-start gap-4">
-          <Image src={badge} alt="badge" width={40} height={40} />
-          <div>
-            <h3 className="font-semibold text-xl mb-2">
-              Application Assistance
-            </h3>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl p-8 shadow-lg flex items-start gap-4">
-          <Image src={star} alt="star" width={40} height={40} />
-          <div>
-            <h3 className="font-semibold text-xl mb-2">Scholarships</h3>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="text-center mt-12">
@@ -61,4 +56,5 @@ const Services = () => {
     </div>
   );
 };
+
 export default Services;

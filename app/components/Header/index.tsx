@@ -1,5 +1,6 @@
-import logo from "../../assets/logo.svg";
 import Image from "next/image";
+
+import logo from "../../assets/logo.svg";
 
 const navItems = [
   { label: "Study Destinations" },
@@ -10,7 +11,7 @@ const navItems = [
 
 const Header = () => {
   return (
-    <header className="absolute top-0 left-0 right-0 flex items-center h-20 px-12 py-2 justify-between ">
+    <header className="absolute top-0 left-0 right-0 flex items-center h-20 px-12 py-2 justify-between">
       <Image src={logo} alt="logo" width={205} height={45} />
       <div className="flex space-x-10 text-white font-semibold text-base items-center">
         {navItems.map((item) => (
