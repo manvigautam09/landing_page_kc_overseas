@@ -1,44 +1,54 @@
 import Image from "next/image";
 
+import listStar from "../../assets/list-star.svg";
+
+const AmbitionsList = [
+  {
+    label: "Virtual & In Person Coaching and Counselling",
+  },
+  {
+    label: "Comprehensive Assistance for Applications, Admissions & Visas",
+  },
+  {
+    label: "High Value Scholarships and Study Loans",
+  },
+];
+
 const Ambitions = () => {
   return (
     <div className="bg-gray-50 py-20 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="rounded-3xl overflow-hidden bg-[#FFF1E7] p-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="relative bg-[#FFE7C9] rounded-lg shadow-md h-[400px] w-[450px]">
           <Image
             src="/student-counselling.jpg"
             alt="Student Counselling"
-            width={600}
+            width={450}
             height={400}
-            className="rounded-2xl w-full h-auto"
+            className="absolute rounded-lg top-6 left-6"
           />
         </div>
 
-        <div className="space-y-6">
-          <h2 className="text-4xl font-bold">
+        <div>
+          <div className="text-2xl font-semibold">
             Realize your global ambitions with us
-          </h2>
-          <p className="text-gray-600">
+          </div>
+          <p className="mt-3">
             With a keen ear for your choices and preferences, our counselling
+            <br />
             experience is so seamless that you will land in your dream
+            <br />
             university even before you do!
           </p>
 
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <span className="text-[#F4804E] text-2xl">•</span>
-              <p>Virtual & In Person Coaching and Counselling</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-[#F4804E] text-2xl">•</span>
-              <p>
-                Comprehensive Assistance for Applications, Admissions & Visas
-              </p>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-[#F4804E] text-2xl">•</span>
-              <p>High Value Scholarships and Study Loans</p>
-            </div>
+          <div className="space-y-4 mt-5">
+            {AmbitionsList.map((item) => (
+              <div className="flex items-center gap-3" key={item.label}>
+                <div className="bg-white rounded-full p-2 shadow-sm">
+                  <Image src={listStar} alt="list star" />
+                </div>
+                <p>{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ const ProvidedServices = [
 const Services = () => {
   return (
     <div className="py-20 px-4">
-      <h2 className="text-4xl font-semibold text-center mb-16">
+      <h2 className="text-4xl font-semibold text-center my-16">
         Services we provide
       </h2>
 
