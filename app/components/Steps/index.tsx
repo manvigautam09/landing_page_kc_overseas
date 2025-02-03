@@ -47,22 +47,24 @@ const Steps = () => {
       <h2 className="text-4xl font-semibold">
         7 Easy Steps to Land in your Dream University
       </h2>
-      <div className="flex justify-end w-full mt-8">
+      <div className="flex ml-[40%] w-full mt-8">
         <div className="flex mt-12 overflow-x-scroll space-x-5 max-w-[800px]">
-          {StepsToDreamUniversity.map((item) => (
-            <div
-              className="bg-white p-6 rounded-lg shadow-md min-w-[400px] flex flex-col items-center"
-              key={item.title}
-            >
-              <Image src={item.icon} alt={item.title} />
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p>{item.description}</p>
+          {StepsToDreamUniversity.map((item, index) => (
+            <div key={item.title} className="flex flex-col items-center">
+              <div className="bg-white shadow h-10 w-10 rounded-full mb-10 flex justify-center items-center">
+                {index + 1}
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md min-w-[400px] flex flex-col items-center">
+                <Image src={item.icon} alt={item.title} />
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="flex justify-between mt-4">
+      <div className="flex justify-center mt-4 space-x-10">
         <button className="text-orange-500">{"<"} Previous Step</button>
         <button className="text-orange-500">Next Step {">"}</button>
       </div>
