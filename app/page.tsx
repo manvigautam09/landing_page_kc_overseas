@@ -5,6 +5,7 @@ import landingSvg from "./assets/landing-bg.svg";
 import arrowDown from "./assets/arrow-down.svg";
 import Services from "./components/Services";
 import Ambitions from "./components/Ambitions";
+import Steps from "./components/Steps";
 
 export default function Home() {
   return (
@@ -56,6 +57,9 @@ export default function Home() {
 
       {/* Global Ambitions Section */}
       <Ambitions />
+
+      {/* 7 Easy Steps Section */}
+      <Steps />
     </div>
   );
 }
