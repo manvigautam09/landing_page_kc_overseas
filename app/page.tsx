@@ -6,6 +6,8 @@ import arrowDown from "./assets/arrow-down.svg";
 import Services from "./components/Services";
 import Ambitions from "./components/Ambitions";
 import Steps from "./components/Steps";
+import WebinarsAndEvents from "./components/WebinarsAndEvents";
+import Reviews from "./components/Reviews";
 
 export default function Home() {
   return (
@@ -60,6 +62,12 @@ export default function Home() {
 
       {/* 7 Easy Steps Section */}
       <Steps />
+
+      {/* Webinars & Events Section */}
+      <WebinarsAndEvents />
+
+      {/* Reviews Section */}
+      <Reviews />
     </div>
   );
 }
