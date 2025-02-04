@@ -1,14 +1,17 @@
+import Image from "next/image";
+
+import USA from "../../assets/USA.jpg";
+import UK from "../../assets/UK.jpg";
+import NewZealand from "../../assets/NewZealand.jpg";
+
 const WebinarsAndEvents = () => {
   return (
     <section className="bg-white py-12">
-      <h2 className="text-center text-2xl font-bold">Webinars & Events</h2>
+      <h2 className="text-center text-4xl font-semibold">Webinars & Events</h2>
       <div className="flex justify-center mt-8 space-x-4">
         <div className="bg-white p-6 rounded-lg shadow-md">
-          <img
-            src="/public/student-counselling.jpg"
-            alt="Event"
-            className="rounded-t-lg"
-          />
+          <Image src={USA} alt="USA" className="rounded-t-lg" />
+
           <h3 className="text-lg font-semibold mt-4">
             USA Virtual Admission Day
           </h3>
@@ -16,11 +19,7 @@ const WebinarsAndEvents = () => {
           <p>Register Now {">"}</p>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md">
-          <img
-            src="/public/student-counselling.jpg"
-            alt="Event"
-            className="rounded-t-lg"
-          />
+          <Image src={UK} alt="UK" className="rounded-t-lg" />
           <h3 className="text-lg font-semibold mt-4">
             UK Virtual Admissions Week
           </h3>

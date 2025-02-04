@@ -64,9 +64,9 @@ const Steps = () => {
         </div>
       </div>
 
-      <div className="flex justify-center mt-4 space-x-10">
-        <button className="text-orange-500">{"<"} Previous Step</button>
-        <button className="text-orange-500">Next Step {">"}</button>
+      <div className="flex justify-center mt-4 space-x-10 font-semibold text-base">
+        <button className="text-[#FF7361]">{"<"} Previous Step</button>
+        <button className="text-[#FF7361]">Next Step {">"}</button>
       </div>
     </section>
   );
