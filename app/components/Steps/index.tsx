@@ -43,7 +43,7 @@ const StepsToDreamUniversity = [
 
 const Steps = () => {
   return (
-    <section className="bg-[#DBD9FF] text-center py-12">
+    <section className="bg-[#DBD9FF] text-center py-12 overflow-hidden">
       <h2 className="text-4xl font-semibold">
         7 Easy Steps to Land in your Dream University
       </h2>
