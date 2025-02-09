@@ -16,7 +16,7 @@ const AmbitionsList = [
 
 const Ambitions = () => {
   return (
-    <div className="bg-gray-50 py-20 px-4">
+    <div className="pb-20 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="relative bg-[#FFE7C9] rounded-lg shadow-md h-[400px] w-[450px]">
           <Image
