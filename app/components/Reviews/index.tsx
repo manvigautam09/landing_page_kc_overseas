@@ -1,5 +1,7 @@
 import Image from "next/image";
 import quotes from "../../assets/quotes.svg";
+import leftArrow from "../../assets/left-arrow.svg";
+import rightArrow from "../../assets/right-arrow.svg";
 
 const Reviews = () => {
   const studentReviews = [
@@ -24,13 +26,18 @@ const Reviews = () => {
   ];
 
   return (
-    <section className="bg-[#FFDCD8] py-12">
+    <section className="bg-[#FFDCD8] pt-12 pb-16">
       <h2 className="text-center text-2xl font-bold">Our students love us</h2>
-      <div className="flex justify-center mt-8 space-x-4">
+      <div className="flex justify-center mt-8 space-x-6 items-center flex-wrap space-y-6 md:space-y-0">
+        <div className="bg-white p-2 rounded-full h-10 w-10 flex justify-center items-center cursor-pointer ">
+          <Image src={leftArrow} alt="leftArrow" />
+        </div>
         {studentReviews.map((review, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-md w-[300px] h-[300px] flex flex-col justify-between"
+            className={`bg-white p-6 rounded-lg shadow-md w-[320px] h-[300px] flex flex-col justify-between ${
+              index === 1 ? "md:mt-16" : ""
+            }`}
           >
             <div>
               <Image src={quotes} alt="Quotes" />
@@ -42,6 +49,9 @@ const Reviews = () => {
             </div>
           </div>
         ))}
+        <div className="bg-white p-2 rounded-full h-10 w-10 flex justify-center items-center cursor-pointer">
+          <Image src={rightArrow} alt="rightArrow" />
+        </div>
       </div>
     </section>
   );
