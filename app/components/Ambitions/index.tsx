@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import listStar from "../../assets/list-star.svg";
+import studentCounselling from "../../assets/student-counselling.jpg";
 
 const AmbitionsList = [
   {
@@ -16,23 +17,21 @@ const AmbitionsList = [
 
 const Ambitions = () => {
   return (
-    <div className="pb-20 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="relative bg-[#FFE7C9] rounded-lg shadow-md h-[400px] w-[450px]">
+    <div className="pb-20 px-4 flex flex-col justify-center items-center w-full">
+      <div className="w-[100%] max-w-6xl mx-auto flex flex-col lg:flex-row justify-center lg:justify-between items-center space-y-8">
+        <div className="relative bg-[#FFE7C9] rounded-lg shadow-md h-[300px] w-[300px] md:h-[400px] md:w-[450px]">
           <Image
-            src="/student-counselling.jpg"
+            src={studentCounselling}
             alt="Student Counselling"
-            width={450}
-            height={400}
-            className="absolute rounded-lg top-6 left-6"
+            className="absolute rounded-lg top-6 left-6 h-[300px] w-[300px] md:h-[400px] md:w-[450px]"
           />
         </div>
 
         <div>
-          <div className="text-2xl font-semibold">
+          <div className="text-xl md:text-2xl font-semibold text-center md:text-left">
             Realize your global ambitions with us
           </div>
-          <p className="mt-3">
+          <p className="mt-3 text-center md:text-left">
             With a keen ear for your choices and preferences, our counselling
             <br />
             experience is so seamless that you will land in your dream
