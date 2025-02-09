@@ -8,7 +8,7 @@ const LatestKCUpdates = () => {
       <h2 className="text-3xl font-bold text-center mb-8">Latest KC Updates</h2>
       <div className="flex justify-center space-x-6">
         <div className="bg-orange-200 p-6 rounded-lg shadow-md flex flex-col justify-between">
-          <h3 className="text-xl font-semibold mb-4">We're Hiring!</h3>
+          <h3 className="text-xl font-semibold mb-4">We&apos;re Hiring!</h3>
           <p className="mb-4">
             KC continues recruitments for its offices across India and Asia even
             during the unprecedented times of Covid.
