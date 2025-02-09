@@ -28,8 +28,8 @@ const Reviews = () => {
   return (
     <section className="bg-[#FFDCD8] pt-12 pb-16">
       <h2 className="text-center text-2xl font-bold">Our students love us</h2>
-      <div className="flex justify-center mt-8 space-x-6 items-center flex-wrap space-y-6 md:space-y-0">
-        <div className="bg-white p-2 rounded-full h-10 w-10 flex justify-center items-center cursor-pointer ">
+      <div className="flex justify-center mt-8 space-x-6 items-center flex-wrap">
+        <div className="bg-white p-2 rounded-full h-10 w-10 flex justify-center items-center cursor-pointer">
           <Image src={leftArrow} alt="leftArrow" />
         </div>
         {studentReviews.map((review, index) => (
