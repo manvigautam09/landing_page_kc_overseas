@@ -1,5 +1,6 @@
 import Image from "next/image";
 import footerBg from "../../assets/footer-bg.svg";
+import arrowDown from "../../assets/arrow-down.svg";
 
 const Footer = () => {
   return (
@@ -16,12 +17,17 @@ const Footer = () => {
               placeholder="Email ID"
               className="w-64 px-4 py-2 rounded-md text-gray-700 focus:outline-none"
             />
-            <select className="w-48 px-4 py-2 rounded-md text-gray-700 focus:outline-none appearance-none">
-              <option>I&apos;m Interested in</option>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
+            <div className="relative w-48">
+              <select className="w-full px-4 py-2 rounded-md text-gray-700 focus:outline-none appearance-none">
+                <option>I&apos;m Interested in</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                <Image src={arrowDown} alt="Arrow Down" className="w-4 h-4" />
+              </div>
+            </div>
             <button className="bg-[#FF9B51] text-white px-6 py-2 rounded-md hover:bg-[#f08080] focus:outline-none">
               Subscribe Now
             </button>
