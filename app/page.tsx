@@ -9,6 +9,7 @@ import Steps from "./components/Steps";
 import WebinarsAndEvents from "./components/WebinarsAndEvents";
 import Reviews from "./components/Reviews";
 import LatestKCUpdates from "./components/LatestKCUpdates";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -72,6 +73,9 @@ export default function Home() {
 
       {/* Latest KC Updates Section */}
       <LatestKCUpdates />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
