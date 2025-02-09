@@ -9,8 +9,8 @@ const LatestKCUpdates = () => {
     <div className="py-12 bg-white">
       <h2 className="text-3xl font-bold text-center mb-8">Latest KC Updates</h2>
       <div className="max-w-full flex justify-center">
-        <div className="flex justify-center space-x-6 max-w-[500px] md:max-w-full">
-          <div className="bg-[#FDAF4D] p-6 rounded-lg shadow-md flex flex-col max-w-[500px] relative h-[380px] justify-between">
+        <div className="flex flex-wrap justify-center space-x-6 max-w-[500px] md:max-w-full space-y-6 md:space-y-0">
+          <div className="bg-[#FDAF4D] p-6 rounded-lg shadow-md flex flex-col md:max-w-[500px] relative h-[380px] justify-between">
             <Image
               src={updatedBg}
               alt="updatedBg"

@@ -57,16 +57,16 @@ export default function Home() {
       </div>
 
       {/* Services Section */}
-      <Services />
+      {/* <Services /> */}
 
       {/* Global Ambitions Section */}
-      <Ambitions />
+      {/* <Ambitions /> */}
 
       {/* 7 Easy Steps Section */}
-      <Steps />
+      {/* <Steps /> */}
 
       {/* Webinars & Events Section */}
-      <WebinarsAndEvents />
+      {/* <WebinarsAndEvents /> */}
 
       {/* Reviews Section */}
       <Reviews />

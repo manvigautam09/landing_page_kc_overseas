@@ -1,6 +1,8 @@
+import quotes from "../../assets/quotes.svg";
+
 const Reviews = () => {
   return (
-    <section className="bg[#FFDCD8] py-12">
+    <section className="bg-[#FFDCD8] py-12">
       <h2 className="text-center text-2xl font-bold">Our students love us</h2>
       <div className="flex justify-center mt-8 space-x-4">
         <div className="bg-white p-6 rounded-lg shadow-md">
