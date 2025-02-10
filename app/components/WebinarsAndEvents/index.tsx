@@ -42,7 +42,7 @@ const events: Event[] = [
 const Event = ({ event, split }: { event: Event; split?: boolean }) => {
   return (
     <div
-      className={`bg-white rounded-lg shadow-md overflow-hidden w-[512px] ${
+      className={`bg-white rounded-lg shadow-md overflow-hidden w-full sm:w-[512px] ${
         split ? "h-[250px] flex" : ""
       }`}
     >
@@ -50,14 +50,18 @@ const Event = ({ event, split }: { event: Event; split?: boolean }) => {
         src={event.image}
         alt={event.alt}
         className={`object-cover ${
-          split ? "w-[195px] h-full" : "w-full h-[300px]"
+          split ? "w-[195px] h-full" : "w-full h-[200px] sm:h-[300px]"
         }`}
       />
-      <div className={`${split ? "p-4" : "p-6"}`}>
-        <p className="text-blue-500">{event.date}</p>
-        <h3 className="text-lg font-semibold mt-2">{event.title}</h3>
-        <p className="mt-2">{event.description}</p>
-        <p className="text-orange-500 mt-4">Register Now {">"}</p>
+      <div className={`${split ? "p-2 sm:p-4" : "p-4 sm:p-6"}`}>
+        <p className="text-[#226CF5] text-sm sm:text-base">{event.date}</p>
+        <h3 className="text-base sm:text-lg font-semibold mt-2">
+          {event.title}
+        </h3>
+        <p className="mt-2 text-sm sm:text-base">{event.description}</p>
+        <p className="text-[#FF7361] text-base font-semibold mt-4">
+          Register Now {">"}
+        </p>
       </div>
     </div>
   );
@@ -65,10 +69,12 @@ const Event = ({ event, split }: { event: Event; split?: boolean }) => {
 
 const WebinarsAndEvents = () => {
   return (
-    <section className="bg-white py-12">
-      <h2 className="text-center text-4xl font-semibold">Webinars & Events</h2>
-      <div className="mt-8 flex justify-center w-full">
-        <div className="max-w-5xl flex space-x-3">
+    <section className="bg-white py-8 sm:py-12">
+      <h2 className="text-center text-2xl sm:text-4xl font-semibold">
+        Webinars & Events
+      </h2>
+      <div className="mt-4 sm:mt-8 flex justify-center w-full">
+        <div className="max-w-5xl flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
           <Event event={highlightEvent} />
           <div className="flex flex-col space-y-3">
             {events.map((event, index) => (
@@ -78,7 +84,9 @@ const WebinarsAndEvents = () => {
         </div>
       </div>
       <div className="text-center mt-4">
-        <button className="text-orange-500">See More {">"}</button>
+        <button className="text-[#FF7361] text-base font-semibold">
+          See More {">"}
+        </button>
       </div>
     </section>
   );
