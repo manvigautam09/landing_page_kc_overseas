@@ -42,7 +42,7 @@ const events: Event[] = [
 const Event = ({ event, split }: { event: Event; split?: boolean }) => {
   return (
     <div
-      className={`bg-white rounded-lg shadow-md overflow-hidden w-full sm:w-[512px] ${
+      className={`bg-white rounded-lg shadow-md lg:w-[500px] ${
         split ? "h-[250px] flex" : ""
       }`}
     >
@@ -73,7 +73,15 @@ const WebinarsAndEvents = () => {
       <h2 className="text-center text-2xl sm:text-4xl font-semibold">
         Webinars & Events
       </h2>
-      <div className="mt-4 sm:mt-8 flex justify-center w-full">
+      <div className="lg:hidden  overflow-scroll w-full flex items-center justify-center">
+        <div className="flex flex-wrap space-y-4 justify-center">
+          <Event event={highlightEvent} />
+          {events.map((event, index) => (
+            <Event key={index} event={event} />
+          ))}
+        </div>
+      </div>
+      <div className="mt-4 sm:mt-8 lg:flex justify-center w-full hidden">
         <div className="max-w-5xl flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
           <Event event={highlightEvent} />
           <div className="flex flex-col space-y-3">
